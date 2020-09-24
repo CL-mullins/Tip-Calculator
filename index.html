@@ -5,40 +5,48 @@
 <body>
     <!--Input functions-->
     <h3><p>Bill</p>
-    <input type = "number" id = 'input-bill'></h3>
+    <input type = "number" id = 'input-bill' value = "3"></h3>
 
     <h3><p>Tip</p>
-    <input type = "number" id = 'input-tip'></h3>
+    <input type = "number" id = 'input-tip' value = "6"></h3>
 
     <h3><p>Number of People</p>
-    <input type = "number" id = "input-people"></h3>
+    <input type = "number" id = "input-people" value = "9"></h3>
     <!--Display out of Bill, Tip & Number of people -->
     <!--Right hand side of the screen-->
-    <h3><p><output type = "number" id ="tip">Tip</output></p></h3>
-    <h3><p><output type = "number" id = "total">Total</output></p></h3>
-<script>
-    const billInput = document.querySelector("#input-bill")
-    billInput.addEventListener('input', function(e) {
+    <h3>Tip</h3>
+    
+    <span id = "tip"></span>
 
-    })
+    <h3>Total</h3>
+        
+    <span id = "total"></span>
+
+<script>
+    //Updates Tip & Total values
+    const billInput = document.querySelector("#input-bill")
+    billInput.addEventListener('input', updateTip)
   
     const tipInput = document.querySelector("#input-tip")
-    tipInput.addEventListener('input', function(e) {
-
-    })
+    tipInput.addEventListener('input', updateTip) 
 
     const peopleInput = document.querySelector("#input-people")
-    peopleInput.addEventListener(input, function(e) {
+    peopleInput.addEventListener('input', updateTip)
 
-    })
 
-    const percent = tipInput.value
 
-    const tip = billInput * percent / 100
-    const total = billInput + tip
+    function updateTip() {    
+        const percent = tipInput.value
+        const tipAmount = billInput.value * percent / 100
+        const totalAmount = billInput.value + tipAmount
+        console.log(tipAmount)
+        console.log(totalAmount)
 
-    const billOutput = document.querySelector("#display-bill")
-    const tipOutput = document.querySelector("#display-tip")
-    const peopleOutput = document.querySelector("display-people")
+
+        const tipElem = document.querySelector("#tip")
+        const totalElem = document.querySelector("#total")
+        tipElem.innerHTML = tipAmount
+        totalElem.innerHTML = totalAmount
+    }
 </script>
 </body>
