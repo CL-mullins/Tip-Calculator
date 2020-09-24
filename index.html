@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <!--Input functions-->
+    <h3><p>Bill</p>
+    <input type = "number" id = 'input-bill'></h3>
+
+    <h3><p>Tip</p>
+    <input type = "number" id = 'input-tip'></h3>
+
+    <h3><p>Number of People</p>
+    <input type = "number" id = "input-people"></h3>
+    <!--Display out of Bill, Tip & Number of people -->
+    <!--Right hand side of the screen-->
+    <h3><p><output type = "number" id ="tip">Tip</output></p></h3>
+    <h3><p><output type = "number" id = "total">Total</output></p></h3>
+<script>
+    const billInput = document.querySelector("#input-bill")
+    billInput.addEventListener('input', function(e) {
+
+    })
+  
+    const tipInput = document.querySelector("#input-tip")
+    tipInput.addEventListener('input', function(e) {
+
+    })
+
+    const peopleInput = document.querySelector("#input-people")
+    peopleInput.addEventListener(input, function(e) {
+
+    })
+
+    const percent = tipInput.value
+
+    const tip = billInput * percent / 100
+    const total = billInput + tip
+
+    const billOutput = document.querySelector("#display-bill")
+    const tipOutput = document.querySelector("#display-tip")
+    const peopleOutput = document.querySelector("display-people")
+</script>
+</body>
