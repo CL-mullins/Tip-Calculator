@@ -36,12 +36,13 @@
 
 
     function updateTip() {    
-        const percent = tipInput.value
-        const tipAmount = billInput.value * percent / 100
-        const totalAmount = billInput.value + tipAmount
+       
+        const percent = parseInt(tipInput.value) / 100
+        const tipAmount = parseInt(billInput.value) * percent
+        const totalAmount = parseInt(billInput.value) + tipAmount
         console.log(tipAmount)
         console.log(totalAmount)
-
+        //TODO: Make changes where tip differs when there is more than one person
 
         const tipElem = document.querySelector("#tip")
         const totalElem = document.querySelector("#total")
